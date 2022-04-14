@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Bai tap So dao nguoc </title>
+</head>
+<body>
+
+<h2> Bai tap So dao nguoc </h2>
+<br>
+<h3> Moi ban nhap so ma ban muon dao nguoc </h3>
+<br>
+<input id="input">
+<br>
+<br>
+<button onclick="hienThi()"> Hien thi </button>
+<br>
+<br>
+<h3 id="massege"></h3>
+
+	<script>
+	function hienThi(){
+			let num = document.getElementById('input').value;
+			let a = 0;
+			let b = 0;
+			while (num != 0) {
+				a = num % 10;
+				b = b*10 + a;
+				num = Math.floor(num /10);
+			}
+			document.getElementById('massege').innerHTML = b;
+}
+	</script>
+</body>
+</html>

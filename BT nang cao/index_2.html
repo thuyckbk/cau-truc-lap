@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Bai tap nang cao </title>
+</head>
+<body>
+
+<h2> Bai tap ve tam giac </h2>
+<br>
+<h3> Moi ban nhap kich thuoc canh </h3>
+<h4> Luu y kich thuoc nho hon 50 </h4>
+<br>
+<input id="input">
+<br>
+<br>
+<button onclick="hienThi()"> Hien thi </button>
+<br>
+<br>
+<div style="width:150px;">
+<h3 id="massege"></h3>
+<br>
+<br>
+<h3 id="massege1" style="text-align:right;"></h3>
+<br>
+<br>
+<h3 id="massege2"></h3>
+</div>
+	<script>
+	function hienThi(){
+			let num = document.getElementById('input').value;
+			if (num <=50 ){
+			let a = "";
+			for (let i = 0; i<=num; i++) {
+				
+				for(let j = 1; j<=i; j++){
+					a = a +' '+ j;
+				}
+				a  = a + "<br>";
+			}
+			let b = "";
+			for (let i1 = 0; i1<=num; i1++) {
+				for(let j1 = 1; j1<=num-i1; j1++){
+					b = b + ' ' +j1;
+				}
+				b  = b + "<br>";
+			}
+			let c = "";
+			for (let i2 = 0; i2<=num; i2++) {
+				for(let j2 = 0; j2<=num-i2-1; j2++){
+					c = c + "&nbsp&nbsp";
+				}
+				for (let j3 = 1; j3<=i2;j3++){
+					c =  c +j3;
+				}
+				c  = c + "<br>";
+			}
+			let d = "";
+			for (let i4 = 0; i4<num; i4++) {
+				for(let j4 = 0; j4<i4; j4++){
+					d = d + "&nbsp&nbsp";
+				}
+				for (let j5 = 1; j5<=num-i4;j5++){
+					d = d + j5;
+				}
+				d  = d + "<br>";
+			}
+			
+			document.getElementById('massege').innerHTML = a+ "<br>" +b;
+			document.getElementById('massege1').innerHTML = a+ "<br>" +b;
+			document.getElementById('massege2').innerHTML = c+ "<br>" +d;
+
+			}else{
+			document.getElementById('massege').innerHTML = "So ban nhap qua lon!";
+			
+			}
+			/*let num = document.getElementById('input').value;
+			let a="";
+			for (let i=1;i<=num;i++){
+				a= i + " " +a+ " "+i;
+				document.write(a, "<br>");
+				}
+			for (let j=num;j>0;j--){
+				for(i=0;i<j;i++){
+					document.write("*");
+				}
+				document.write("<br>");
+				}
+			for( let a=0;a<=num;a++){
+				for (let b=0; b<=num;b++){
+					if((a+b)>num){
+						document.write("*");
+					}else{
+						document.write("&nbsp&nbsp");
+						}
+					}
+					document.write("<br>");
+					}*/
+}
+	</script>
+</body>
+</html>

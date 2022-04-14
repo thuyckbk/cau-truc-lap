@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Bai tap Hien thi cac so nguyen to </title>
+</head>
+<body>
+<br>
+<br>
+<button id="baiTap" onclick="soNguyenTo()">Hien thi cac so nguyen to dau tien</button>
+
+	<script>
+	function soNguyenTo(){
+			let number = parseInt(prompt('Moi ban nhap so luong so nguyen to ma ban muon hien thi'));
+			let count = 1;
+			let n=4;
+			let check = true;
+			let a ='';
+			let m;
+			if(number ==1){
+			a = '2';
+			}else if (number >=2){
+			a = '2, 3';
+			count +=1;
+			while (count < number){
+				n++;
+			    m =Math.sqrt(n);
+				for (let i=2; i<=m; i++){
+					if (n%i==0){
+						check = false;
+						break;
+						}else{
+						check = true;
+						}
+					}
+				if (check==true){
+					count++;
+					a = a +  ", " +n ;
+					}
+				}
+			}
+			document.write(number+" so nguyen to dau tien ma ban muon hien thi la: "+ a);
+			}
+	</script>
+</body>
+</html>

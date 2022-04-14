@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Bai tap Game doan so </title>
+</head>
+<body>
+
+<h2> Game doan so</h2>
+<br>
+<h3>Mo ta</h3>
+<p>May se tao ra mot so ngau nhien trong khoang ma ban chon, sau do ban hay doan xem may da chon ra so bao nhieu,
+ ban duoc phep doan 5 lan. </p>
+ 
+<h3>Moi ban nhap khoang ma ban muon doan</h3>
+<input id="start">
+<input id="end">
+<button onclick="play()"> Play Game</button>
+<br>
+<br>
+<h3 id="massege"></h3>
+
+	<script>
+	function play(){
+			let start = document.getElementById('start').value;
+			let end = document.getElementById('end').value;
+			let random = Math.floor((Math.random()*end)+start);
+			document.getElementById('massege').innerHTML='May da tao mot so nhau nhien, moi ban du doan xem la so may.';
+			for (let i = 0; i<=4 ; i++){
+			let duDoan = prompt('moi ban nhap so du doan: ');
+			if (duDoan == random){
+				alert('Chuc mung ban da doan dung! So cua may la: '+ random);
+				break;
+			}else if (duDoan > random) {
+				alert('Ban da doan sai, so ban doan lon hon so may chon.');
+			}else {
+				alert('Ban da doan sai, so ban doan nho hon so may chon.');
+			}
+			if (i==4){
+				alert('Ban da thua cuoc. So cua may la: '+ random);
+			}
+			}
+}
+	</script>
+</body>
+</html>

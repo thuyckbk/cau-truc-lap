@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Bai tap tinh tong cac so trong khoang </title>
+</head>
+<body>
+
+<h2> Bai tap tinh tong cac so trong khoang </h2>
+<br>
+<h3> Moi ban nhap khoang so ma ban muon tinh tong </h3>
+<br>
+<input id="start">
+<input id="end">
+
+<br>
+<br>
+<button onclick="ketQua()"> Ket qua </button>
+<br>
+<br>
+<h3 id="massege"></h3>
+
+	<script>
+	function ketQua(){
+			let input = parseInt(document.getElementById('start').value);
+			let end = document.getElementById('end').value;
+			let start = input;
+			let a = start + 1;
+			if (input>end){
+				start=end;
+				let khoangCach = Math.abs(input-end);
+			for (let i = 0; i<khoangCach; i++) {
+				start = start + a;
+				a = a + 1;
+			}
+		}
+			document.getElementById('massege').innerHTML = ('Tong cac so trong khoang [' + input + ' - ' + end + '] la: ' +  start);
+}
+	</script>
+</body>
+</html>

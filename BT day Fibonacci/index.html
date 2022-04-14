@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Bai tap Day Fibonacci </title>
+</head>
+<body>
+
+<h2> Day Fibonacci </h2>
+<br>
+<button onclick="hienThi()"> Hien thi </button>
+<br>
+<br>
+<h3 id="massege"></h3>
+
+	<script>
+	function hienThi(){
+			let num = prompt('Moi ban nhap vao so day ma ban muon hien thi: ');
+			let u1 = 0;
+			let u2 = 1;
+			let u = u1 + u2;
+			let a = 0;
+			let fibonacci = '1, ' + u + ', ';
+				while(num<2){
+				alert('Số bạn nhập phải lớn hơn hoặc bằng 2.');
+				num = prompt('Moi ban nhap vao so day ma ban muon hien thi: ');
+				}
+			while (a < num - 2) {
+				u1 = u2;
+				u2 = u;
+				u = u1 + u2;
+				fibonacci = fibonacci + u + ', ';
+				a++;
+			}
+			document.getElementById('massege').innerHTML = ('Day Fibonacci gom co '+num+ ' so la: ' + fibonacci);
+
+	}
+	</script>
+</body>
+</html>

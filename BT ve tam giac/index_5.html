@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Bai tap ve tam giac </title>
+</head>
+<body>
+
+<h2> Bai tap ve tam giac </h2>
+<br>
+<h3> Moi ban nhap kich thuoc canh </h3>
+<h4> Luu y kich thuoc nho hon 50 </h4>
+<br>
+<input id="input">
+<br>
+<br>
+<button onclick="hienThi()"> Hien thi </button>
+<br>
+<br>
+<h3 id="massege"></h3>
+
+	<script>
+	function hienThi(){
+			let num = document.getElementById('input').value;
+			if (num <=50 ){
+			let a = "";
+			for (let i = 0; i<num; i++) {
+				for(let j = 0; j<=i; j++){
+					a = a + "*";
+				}
+				a  = a + "<br>";
+			}
+			let b = "";
+			for (let i1 = 0; i1<num; i1++) {
+				for(let j1 = 0; j1<num-i1; j1++){
+					b = b + "*";
+				}
+				b  = b + "<br>";
+			}
+			
+			document.getElementById('massege').innerHTML = a+ "<br>" +b;
+			}else{
+			document.getElementById('massege').innerHTML = "So ban nhap qua lon!";
+			
+			}
+}
+	</script>
+</body>
+</html>

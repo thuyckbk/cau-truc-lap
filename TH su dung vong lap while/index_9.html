@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Thuc hanh vong lap while </title>
+</head>
+<body>
+	<h1><button id="BT1" onclick="baiTap1()">Bai tap 1</button></h1>
+	
+	<h3 id = "number"></h3>
+	<br>
+	<hr>
+	<br>
+	<div id = "hienThi"></div>
+	<script>
+		function baiTap1(){
+			let num;
+			let total=0;
+			while (num != -1){
+				num = parseInt(prompt ('Moi ban nhap vao 1 so: '));
+				alert(num);3
+				//document.getElementById('number').innerHTML = num;
+				total += num; 
+			}
+			document.getElementById('hienThi').innerHTML = total;
+		}
+	</script>
+	
+	
+	<h1><button id="BT2" onclick="baiTap2()">Bai tap 2</button></h1>
+
+	<script>
+		function baiTap2(){
+			let i = 1;
+			while (i <100){
+				document.write("<hr width = " + i + " %>");
+				i+=2;
+				}
+				}
+	</script>
+</body>
+</html>

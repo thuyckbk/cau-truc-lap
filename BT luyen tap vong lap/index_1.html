@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Bai tap Hien thi cac so nguyen to </title>
+</head>
+<body>
+<br>
+<br>
+<button id="cach1" onclick="baiTap1()">Bai tap 1</button>
+<br>
+<br>
+<button id="cach2" onclick="baiTap2()">Bai tap 2</button>
+<br>
+<br>
+<button id="cach3" onclick="baiTap3()">Bai tap 3</button>
+<br>
+<br>
+<button id="cach4" onclick="baiTap4()">Bai tap 4</button>
+<br>
+<br>
+<button id="cach5" onclick="baiTap5()">Bai tap 5</button>
+<br>
+<br>
+<button id="cach6" onclick="baiTap6()">Bai tap 6</button>
+<br>
+<br>
+<button id="cach7" onclick="baiTap7()">Bai tap 7</button>
+
+	<script>
+	function baiTap1(){
+				let count;
+				for (let i = 1; i<=100 ; i++){
+					count = i;
+					if (count==99){
+						alert('Da hoan thanh. count = '+count);
+					}
+				}
+			}
+	function baiTap2(){
+				let nhietDo = prompt('Moi ban nhap nhiet do: ');
+				while (nhietDo > 100 || nhietDo<20){
+					if (nhietDo>100){
+						alert('Yeu cau ban ha nhiet do xuong.');
+						nhietDo = prompt('Moi ban nhap nhiet do: ');
+					}
+					if (nhietDo<20){
+						alert('Yeu cau ban tang nhiet do len.');
+						nhietDo = prompt('Moi ban nhap nhiet do: ');
+					}
+				}
+				alert('Nhiet do hien tai la: ' + nhietDo);
+			}
+	function baiTap3(){
+			//let num = prompt('Moi ban nhap vao so day ma ban muon hien thi: ');
+			let num = 20;
+			let u1 = 0;
+			let u2 = 1;
+			let u = u1 + u2;
+			let a = 0;
+			let fibonacci = '1' + ', ' +u;
+			while (a < num - 2) {
+				u1 = u2;
+				u2 = u;
+				u = u1 + u2;
+				fibonacci = fibonacci +  ', ' +u;
+				a++;
+			}
+			document.write('Day Fibonacci gom co '+num+ ' so la: ' + fibonacci);
+			}
+	function baiTap4(){
+			//let num = prompt('Moi ban nhap vao so day ma ban muon hien thi: ');
+			let num = 20;
+			let u1 = 0;
+			let u2 = 1;
+			let u = u1 + u2;
+			let a = 0;
+			let fibonacci = '1' + ', ' +u;
+			while (a < num - 2) {
+				u1 = u2;
+				u2 = u;
+				u = u1 + u2;
+				fibonacci = fibonacci +  ', ' +u;
+				a++;
+				if (u%5==0)
+				break;
+			}
+			document.write('So dau tien trong day Fibonacci chia het cho 5 la: ' + u+"<br>");
+			document.write('Day Fibonacci cho den so dau tien chia het cho 5 la: ' + fibonacci );
+			}
+	function baiTap5(){
+			let num = prompt('Moi ban nhap vao so day ma ban muon hien thi: ');
+			//let num = 20;
+			let u1 = 0;
+			let u2 = 1;
+			let u = u1 + u2;
+			let a = 0;
+			let sum = 2;
+			let fibonacci = '1' + ', ' +u;
+			
+			while (a < num - 2) {
+				u1 = u2;
+				u2 = u;
+				u = u1 + u2;
+				fibonacci = fibonacci +  ', ' +u;
+				a++;
+				sum = sum + u;
+			}
+			document.write('Tong cua '+num+ ' so dau tien trong day Fibonacci la: '+sum + "<br>");
+			document.write('Day Fibonacci gom co '+num+ ' so la: ' + fibonacci);
+			}
+	function baiTap6(){
+				let count=0;
+				let sum=0;
+				let i=0;
+				let n = '';
+				while(count<30){
+						i++;
+					if (i%7==0){
+						sum = sum +i;
+						count++;
+						n = n +i+', ';
+						}
+				}
+			document.write('Tong cua 30 so dau tien chia het cho 7 la: '+sum + "<br>");
+			document.write('Cac so chia het cho 7 la: ' + n);
+			}
+	function baiTap7(){
+			for (let i = 1; i<=100;i++){
+				if(i%3==0 && i%5==0){
+				document.write('FizzBuzz',"<br>");
+				continue;
+				}
+			
+				if(i%3==0){
+				document.write('Fizz',"<br>");
+				continue;
+				}
+				if(i%5==0){
+				document.write('Buss',"<br>");
+				continue;
+				}
+				document.write(i, "<br>");
+				}
+			}//hoac dung toan tu 3 ngoi ((i%3==0&&i%5==0) ? "FizzBuzz" : (i%3==0)? "Fizz" : (i%5==0) ? "Buzz" : i)
+	</script>
+</body>
+</html>
